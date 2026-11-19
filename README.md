@@ -58,6 +58,9 @@ values plus `@theme inline` mappings. Keep the hosted form's primary fill dark e
 Keyboard focus, reduced motion and print styles are included. The footer credit is yours to keep,
 reword or remove.
 
+Replace `public/spa-light.webp` and `public/spa-dark.webp` together to update the home hero.
+Use matching portrait compositions with the main subject in the upper half for the mobile crop.
+
 For a business with visiting hours, add address/directions/hours to typed content, set the IANA `timeZone`
 in site.config.json and use optional `GoogleMap`, `TimeZoneNote` and `OpenBadge` components. GoogleMap
 accepts an address and descriptive title; map helpers need no key. `OpenBadge` accepts seven

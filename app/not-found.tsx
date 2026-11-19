@@ -1,6 +1,10 @@
-import { SiteLink } from '../components/site-link';
+import { NotFoundRoom } from '../components/inner-sections';
+
 export default function NotFound() {
-  return <section className="wrap py-20"><h1 className="text-4xl font-bold">Page not found</h1>
-    <p className="my-6 text-muted">Try the home page or get in touch.</p>
-    <SiteLink href="/" className="button">Go home</SiteLink></section>;
+  return (
+    <NotFoundRoom heading="This room is between appointments.">
+      The page you’re looking for isn’t here — perhaps it moved or rested for the season. Step back
+      to the lobby, read the treatment menu or write to the desk.
+    </NotFoundRoom>
+  );
 }

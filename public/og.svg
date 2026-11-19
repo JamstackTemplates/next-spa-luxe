@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="linen" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 6h24M0 18h24M6 0v24M18 0v24" stroke="#2E2621" stroke-opacity="0.032" stroke-width="0.75"/>
+      <path d="M0 12h24M12 0v24" stroke="#A08D7D" stroke-opacity="0.04" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="warmGlow" cx="76%" cy="38%" r="52%">
+      <stop offset="0%" stop-color="#DFC487" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#C8A96A" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#C8A96A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="giltArc" x1="720" y1="60" x2="1080" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E4C889"/>
+      <stop offset="100%" stop-color="#A8843F"/>
+    </linearGradient>
+    <linearGradient id="giltRule" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C8A96A" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#C8A96A" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#C8A96A" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Afternoon linen ground -->
+  <rect width="1200" height="630" fill="#F5EFE6"/>
+  <rect width="1200" height="630" fill="url(#linen)"/>
+  <rect width="1200" height="630" fill="url(#warmGlow)"/>
+
+  <!-- Double gilt editorial frame -->
+  <rect x="28" y="28" width="1144" height="574" fill="none" stroke="#C8A96A" stroke-opacity="0.6" stroke-width="1.4"/>
+  <rect x="38" y="38" width="1124" height="554" fill="none" stroke="#D7CBB9" stroke-width="0.9"/>
+
+  <!-- Subtle eucalyptus corner top-left -->
+  <g opacity="0.72" transform="translate(38, 36)">
+    <path d="M 8 112 C 42 86, 90 54, 170 12" fill="none" stroke="#C8A96A" stroke-width="1.35" stroke-linecap="round"/>
+    <ellipse cx="46" cy="78" rx="15" ry="9" transform="rotate(-24 46 78)" fill="#A08D7D" fill-opacity="0.22" stroke="#C8A96A" stroke-width="1.15"/>
+    <ellipse cx="58" cy="96" rx="13" ry="8" transform="rotate(14 58 96)" fill="#A08D7D" fill-opacity="0.18" stroke="#C8A96A" stroke-width="1.15"/>
+    <ellipse cx="86" cy="54" rx="14" ry="8.5" transform="rotate(-30 86 54)" fill="#A08D7D" fill-opacity="0.24" stroke="#C8A96A" stroke-width="1.15"/>
+    <ellipse cx="104" cy="70" rx="12" ry="7.5" transform="rotate(12 104 70)" fill="#A08D7D" fill-opacity="0.16" stroke="#C8A96A" stroke-width="1.15"/>
+    <ellipse cx="132" cy="30" rx="11" ry="6.8" transform="rotate(-26 132 30)" fill="#A08D7D" fill-opacity="0.22" stroke="#C8A96A" stroke-width="1.15"/>
+  </g>
+
+  <!-- Left editorial column: Monogram + Wordmark + Subtitle -->
+  <g transform="translate(106, 152)">
+    <!-- VH Monogram -->
+    <g transform="translate(0, 0)">
+      <circle cx="38" cy="38" r="35" fill="#FBF7F1" stroke="#C8A96A" stroke-opacity="0.45" stroke-width="1.1"/>
+      <circle cx="38" cy="38" r="29" fill="none" stroke="url(#giltArc)" stroke-width="2" stroke-dasharray="137 46" transform="rotate(-90 38 38)" stroke-linecap="round"/>
+      <text x="38" y="46" text-anchor="middle" fill="#2E2621" font-family="'Italiana', Georgia, serif" font-size="25" letter-spacing="1">VH</text>
+    </g>
+
+    <text x="0" y="138" fill="#8A6A2E" font-family="'Jost Variable', 'Jost', sans-serif" font-size="16" font-weight="500" letter-spacing="5">
+      DAY SPA · FORSYTH PARK, SAVANNAH
+    </text>
+
+    <text x="0" y="232" fill="#2E2621" font-family="'Italiana', Georgia, serif" font-size="94" letter-spacing="-1">
+      The Velvet
+    </text>
+    <text x="0" y="324" fill="#2E2621" font-family="'Italiana', Georgia, serif" font-size="94" letter-spacing="-1">
+      Hour
+    </text>
+
+    <line x1="0" y1="364" x2="220" y2="364" stroke="#C8A96A" stroke-width="1.4"/>
+    <text x="0" y="400" fill="#6B5D52" font-family="'Jost Variable', 'Jost', sans-serif" font-size="20" font-weight="400" letter-spacing="0.4">
+      Facials, massage, packages, couples’ suite &amp; gift cards.
+    </text>
+  </g>
+
+  <!-- Tall arch backdrop behind right Hour Dial & folded robe -->
+  <path d="M 702 592 L 702 252 A 208 208 0 0 1 1118 252 L 1118 592 Z" fill="#FBF7F1" stroke="#C8A96A" stroke-opacity="0.58" stroke-width="1.4"/>
+  <path d="M 716 592 L 716 254 A 194 194 0 0 1 1104 254 L 1104 592" fill="none" stroke="#E9DFD2" stroke-width="1"/>
+
+  <!-- Large Hour Dial with 90-minute arc (full outer 60m ring + half inner 30m ring) -->
+  <g transform="translate(910, 260)">
+    <circle cx="0" cy="0" r="154" fill="#F5EFE6" fill-opacity="0.65" stroke="#C8A96A" stroke-opacity="0.5" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="126" fill="none" stroke="#A08D7D" stroke-opacity="0.22" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#A08D7D" stroke-opacity="0.24" stroke-width="1.1" stroke-dasharray="3 4"/>
+
+    <!-- Cardinal ticks -->
+    <g stroke="#C8A96A" stroke-width="2" stroke-linecap="round">
+      <line x1="0" y1="-148" x2="0" y2="-134"/>
+      <line x1="148" y1="0" x2="134" y2="0"/>
+      <line x1="0" y1="148" x2="0" y2="134"/>
+      <line x1="-148" y1="0" x2="-134" y2="0"/>
+    </g>
+    <!-- Hour ticks -->
+    <g stroke="#A08D7D" stroke-opacity="0.65" stroke-width="1.4" stroke-linecap="round">
+      <line x1="74" y1="-128" x2="68" y2="-118"/>
+      <line x1="128" y1="-74" x2="118" y2="-68"/>
+      <line x1="128" y1="74" x2="118" y2="68"/>
+      <line x1="74" y1="128" x2="68" y2="118"/>
+      <line x1="-74" y1="128" x2="-68" y2="118"/>
+      <line x1="-128" y1="74" x2="-118" y2="68"/>
+      <line x1="-128" y1="-74" x2="-118" y2="-68"/>
+      <line x1="-74" y1="-128" x2="-68" y2="-118"/>
+    </g>
+
+    <!-- 90-minute arc: full outer ring (60 min) -->
+    <circle cx="0" cy="0" r="126" fill="none" stroke="url(#giltArc)" stroke-width="9" stroke-linecap="round"/>
+    <!-- Plus half inner ring (30 min, clockwise 12 o'clock to 6 o'clock) -->
+    <path d="M 0 -100 A 100 100 0 0 1 0 100" fill="none" stroke="url(#giltArc)" stroke-width="8.5" stroke-linecap="round"/>
+    <circle cx="0" cy="-126" r="5" fill="#FBF7F1" stroke="#A8843F" stroke-width="1.6"/>
+
+    <!-- Cardinal numerals -->
+    <g fill="#6B5D52" font-family="'Italiana', Georgia, serif" font-size="16" text-anchor="middle">
+      <text x="0" y="-74">XII</text>
+      <text x="76" y="6">III</text>
+      <text x="0" y="84">VI</text>
+      <text x="-76" y="6">IX</text>
+    </g>
+
+    <text x="0" y="8" text-anchor="middle" fill="#2E2621" font-family="'Italiana', Georgia, serif" font-size="38">90</text>
+    <text x="0" y="28" text-anchor="middle" fill="#8A6A2E" font-family="'Jost Variable', 'Jost', sans-serif" font-size="11" font-weight="500" letter-spacing="3.5">MINUTES</text>
+  </g>
+
+  <!-- Folded waffle robe & plum-velvet ribbon resting below the Hour Dial -->
+  <g transform="translate(910, 492)">
+    <!-- Low ledge line -->
+    <line x1="-178" y1="48" x2="178" y2="48" stroke="#C8A96A" stroke-opacity="0.55" stroke-width="1.4"/>
+    <!-- Folded waffle robe stack -->
+    <rect x="-112" y="12" width="224" height="36" rx="13" fill="#E9DFD2" stroke="#A08D7D" stroke-width="1.4"/>
+    <rect x="-98" y="-22" width="196" height="36" rx="13" fill="#F5EFE6" stroke="#A08D7D" stroke-width="1.4"/>
+    <path d="M -82 -8 h164 M -82 2 h164 M -94 26 h188 M -94 36 h188" stroke="#A08D7D" stroke-opacity="0.34" stroke-width="1" stroke-dasharray="5 5"/>
+    <!-- Velvet ribbon wrapping robe & trailing softly -->
+    <path d="M 0 -24 L 0 50 C 0 72, 22 86, 56 96" fill="none" stroke="#7A5560" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 0 -24 L 0 50 C 0 72, 22 86, 56 96" fill="none" stroke="#DFC488" stroke-opacity="0.7" stroke-width="1.1"/>
+    <path d="M 0 -22 C -26 -46, -54 -36, -42 -18 C -30 -8, -10 -16, 0 -22 C 26 -46, 54 -36, 42 -18 C 30 -8, 10 -16, 0 -22 Z" fill="#7A5560" stroke="#DFC488" stroke-width="1.1"/>
+    <circle cx="0" cy="-22" r="6" fill="#7A5560" stroke="#DFC488" stroke-width="1.2"/>
+  </g>
+</svg>

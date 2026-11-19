@@ -1,4 +1,4 @@
-/** Optional weekly opening-hours model. Time zone stays in site.config.json. */
+/** Weekly opening-hours model. Time zone stays in site.config.json. */
 export const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 export type Day = typeof DAYS[number];
 export interface OpeningHours {
@@ -23,6 +23,34 @@ export function validateHours(hours: readonly OpeningHours[]): void {
   }
   if (hours.length !== 7) throw new Error('hours: expected seven weekdays');
 }
+
+/** Determine the current weekday in the configured IANA time zone (browser-only usage). */
+export function currentDayInZone(timeZone: string, now = new Date()): Day | null {
+  if (!timeZone) return null;
+  try {
+    const weekday = new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'long' }).format(now);
+    return DAYS.includes(weekday as Day) ? (weekday as Day) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Determine whether the business is currently open (browser-only usage). */
+export function isOpenNow(hours: readonly OpeningHours[], timeZone: string, now = new Date()): boolean | null {
+  if (!timeZone) return null;
+  validateHours(hours);
+  let parts: Intl.DateTimeFormatPart[];
+  try {
+    parts = new Intl.DateTimeFormat('en-US', { timeZone, weekday: 'long', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(now);
+  } catch { return null; }
+  const part = (type: string) => parts.find(entry => entry.type === type)?.value ?? '';
+  const index = DAYS.indexOf(part('weekday') as Day);
+  if (index < 0) return null;
+  const current = Number(part('hour')) * 60 + Number(part('minute'));
+  const today = hours.find(entry => entry.day === DAYS[index])!;
+  return Boolean(today.opens && today.closes && current >= minutes(today.opens) && current < minutes(today.closes));
+}
+
 /** Browser callers supply the clock; build/static views never compute current availability. */
 export function openingLabel(hours: readonly OpeningHours[], timeZone: string, now = new Date()): string {
   const fallback = 'See opening hours';
